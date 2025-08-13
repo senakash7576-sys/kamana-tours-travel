@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kamana Tours & Travel | Taxi & Wedding Car Services – Rewa</title>
+  <!-- ... head content (fonts, Tailwind, Razorpay, styles) ... -->
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <!-- Top Bar, Header, Hero, Fleet & Rates -->
+  
+  <!-- Daily Video Updates Section (if present) -->
+  <!-- ... your existing daily video code ... -->
+
+  <!-- === Special Offers Section START === -->
+  <section id="offers" class="py-14 bg-emerald-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold mb-6">Special Offers</h2>
+      <div id="offerGrid" class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </div>
+  </section>
+
+  <script>
+    const offers = [
+      {
+        title: '20% Off on Airport Transfers',
+        description: 'Valid till 25 Aug — Use code AIRPORT20 via WhatsApp.',
+        tag: 'Limited Time',
+        buttonText: 'Book Now',
+        applyAction: () =>
+          window.open('https://wa.me/919202900988?text=Apply%20Offer%20AIRPORT20', '_blank')
+      },
+      {
+        title: 'Flat ₹500 Off on Wedding Cars',
+        description: 'Valid till 30 Aug — Mention WED500 on WhatsApp.',
+        tag: 'Special Deal',
+        buttonText: 'Book Wedding',
+        applyAction: () =>
+          window.open('https://wa.me/919202900988?text=Apply%20Offer%20WED500', '_blank')
+      }
+      // Add more offers here...
+    ];
+
+    const container = document.getElementById('offerGrid');
+    offers.forEach(o => {
+      const card = document.createElement('div');
+      card.innerHTML = `
+        <div class="relative bg-white rounded-2xl shadow-soft border border-slate-200 p-6">
+          <div class="absolute top-4 right-4 bg-emerald-200 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">${o.tag}</div>
+          <h3 class="text-xl font-semibold mb-2">${o.title}</h3>
+          <p class="text-slate-600 mb-4">${o.description}</p>
+          <button class="bg-emerald-500 text-white px-5 py-2 rounded-xl font-semibold hover:bg-emerald-600">${o.buttonText}</button>
+        </div>`;
+      container.appendChild(card);
+      card.querySelector('button').addEventListener('click', o.applyAction);
+    });
+  </script>
+  <!-- === Special Offers Section END === -->
+
+  <!-- Continue: Airport CTA, Wedding Cars, Contact, Payment, Footer, Scripts -->
+</body>
+</html>
