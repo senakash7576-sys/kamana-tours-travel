@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kamana Tours & Travel | Taxi & Wedding Car Services – Rewa</title>
+  <meta name="description" content="Kamana Tours & Travel – Taxi rental, airport transfer, outstation trips & wedding car services in Rewa. Book on WhatsApp or call +91 9202900988." />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui"] } } } };
+  </script>
+  <!-- Razorpay Checkout (enable after adding your live/test key) -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f697.png"/>
+  <style>
+    .glass { backdrop-filter: saturate(180%) blur(8px); background: rgba(255,255,255,0.6); }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <!-- Top Bar -->
+  <div class="bg-slate-900 text-white text-sm">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+      <div class="flex items-center gap-4">
+        <span>📞 <a href="tel:+919202900988" class="underline underline-offset-4">+91 9202900988</a></span>
+        <span>✉️ <a href="mailto:info@kamanatravels.com" class="underline underline-offset-4">info@kamanatravels.com</a></span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/919202900988" class="hover:opacity-90" aria-label="WhatsApp">🟢 WhatsApp</a>
+        <a href="#" class="hover:opacity-90" aria-label="Facebook">📘 Facebook</a>
+        <a href="#" class="hover:opacity-90" aria-label="Instagram">📸 Instagram</a>
+        <a href="#contact" class="bg-emerald-500 text-white px-3 py-1.5 rounded-lg font-semibold hover:bg-emerald-600">Book Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-40 bg-white/90 glass border-b border-slate-200">
+    <nav class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between py-3">
+        <a href="#" class="flex items-center gap-2">
+          <span class="text-2xl">🚖</span>
+          <div class="leading-tight">
+            <div class="font-extrabold text-lg">Kamana Tours & Travel</div>
+            <div class="text-xs text-slate-500 -mt-0.5">Taxi & Wedding Car Services</div>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-6 font-medium">
+          <a href="#fleet" class="hover:text-emerald-600">Taxi Rental</a>
+          <a href="#airport" class="hover:text-emerald-600">Airport</a>
+          <a href="#wedding" class="hover:text-emerald-600">Wedding Cars</a>
+          <a href="#contact" class="hover:text-emerald-600">Contact</a>
+          <a href="#pay" class="hover:text-emerald-600">Pay</a>
+        </div>
+        <a href="https://wa.me/919202900988" class="md:inline-flex hidden bg-emerald-500 text-white px-4 py-2 rounded-xl font-semibold shadow-soft hover:bg-emerald-600">Chat on WhatsApp</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-emerald-100 via-transparent to-cyan-100"></div>
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-10 items-center py-16">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Best Taxi Rental in <span class="text-emerald-600">Rewa</span> – Clean Cars, Professional Drivers</h1>
+          <p class="mt-4 text-lg text-slate-600">Local, outstation & airport transfers. Fast quotes, transparent rates, and 24×7 support. Book on WhatsApp or call now.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#fleet" class="px-5 py-3 rounded-xl bg-slate-900 text-white font-semibold hover:bg-slate-800">View Fleet & Rates</a>
+            <a href="#contact" class="px-5 py-3 rounded-xl bg-white border border-slate-200 font-semibold hover:bg-slate-50">Quick Booking</a>
+          </div>
+          <div class="mt-6 text-sm text-slate-500">✔ A/C cars ✔ Verified drivers ✔ GPS tracking ✔ In-car sanitization</div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[16/10] bg-white rounded-3xl shadow-soft overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1549921296-3b4a6b7b4988?q=80&w=1600&auto=format&fit=crop" alt="Taxi fleet" class="w-full h-full object-cover"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fleet & Rates -->
+  <section id="fleet" class="py-14 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-end justify-between gap-4 mb-6">
+        <h2 class="text-3xl font-extrabold">Taxi Rental Cars & Rates</h2>
+        <div class="text-sm text-slate-500">Sample Rewa rates — edit anytime</div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card template -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-soft overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=1600&auto=format&fit=crop" alt="Swift Dzire" class="h-40 w-full object-cover"/>
+          <div class="p-5">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-bold">Swift Dzire</h3>
+              <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full">Sedan</span>
+            </div>
+            <ul class="mt-3 text-sm space-y-1 text-slate-600">
+              <li>Airport Transfer: ₹800</li>
+              <li>8 Hr / 80 KM: ₹1,800</li>
+              <li>12 Hr / 120 KM: ₹2,000</li>
+              <li>Outstation: ₹11 / KM (Min 250 KM/Day)</li>
+            </ul>
+            <div class="mt-4 flex gap-2">
+              <a href="#contact" class="flex-1 text-center bg-slate-900 text-white px-4 py-2 rounded-lg font-semibold">Book</a>
+              <a href="tel:+919202900988" class="flex-1 text-center bg-white border border-slate-200 px-4 py-2 rounded-lg font-semibold">Call</a>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-soft overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1592853625600-8007b666f3e8?q=80&w=1600&auto=format&fit=crop" alt="Ertiga / Tavera" class="h-40 w-full object-cover"/>
+          <div class="p-5">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-bold">Ertiga / Tavera</h3>
+              <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full">MUV</span>
+            </div>
+            <ul class="mt-3 text-sm space-y-1 text-slate-600">
+              <li>Airport Transfer: ₹1,200</li>
+              <li>8 Hr / 80 KM: ₹2,400</li>
+              <li>12 Hr / 120 KM: ₹2,600</li>
+              <li>Outstation: ₹14 / KM (Min 250 KM/Day)</li>
+            </ul>
+            <div class="mt-4 flex gap-2">
+              <a href="#contact" class="flex-1 text-center bg-slate-900 text-white px-4 py-2 rounded-lg font-semibold">Book</a>
+              <a href="tel:+919202900988" class="flex-1 text-center bg-white border border-slate-200 px-4 py-2 rounded-lg font-semibold">Call</a>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-soft overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1606664967080-1e0fdb61a056?q=80&w=1600&auto=format&fit=crop" alt="Innova" class="h-40 w-full object-cover"/>
+          <div class="p-5">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-bold">Toyota Innova</h3>
+              <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full">MUV</span>
+            </div>
+            <ul class="mt-3 text-sm space-y-1 text-slate-600">
+              <li>Airport Transfer: ₹1,400</li>
+              <li>8 Hr / 80 KM: ₹2,600</li>
+              <li>Full Day / 120 KM: ₹3,200</li>
+              <li>Outstation: ₹16 / KM (Min 250 KM/Day)</li>
+            </ul>
+            <div class="mt-4 flex gap-2">
+              <a href="#contact" class="flex-1 text-center bg-slate-900 text-white px-4 py-2 rounded-lg font-semibold">Book</a>
+              <a href="tel:+919202900988" class="flex-1 text-center bg-white border border-slate-200 px-4 py-2 rounded-lg font-semibold">Call</a>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-soft overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1617813386562-6cde31ff2a7f?q=80&w=1600&auto=format&fit=crop" alt="Innova Crysta" class="h-40 w-full object-cover"/>
+          <div class="p-5">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-bold">Innova Crysta</h3>
+              <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full">Premium</span>
+            </div>
+            <ul class="mt-3 text-sm space-y-1 text-slate-600">
+              <li>Airport Transfer: ₹1,600</li>
+              <li>8 Hr / 80 KM: ₹2,800</li>
+              <li>Full Day / 120 KM: ₹3,600</li>
+              <li>Outstation: ₹17 / KM (Min 250 KM/Day)</li>
+            </ul>
+            <div class="mt-4 flex gap-2">
+              <a href="#contact" class="flex-1 text-center bg-slate-900 text-white px-4 py-2 rounded-lg font-semibold">Book</a>
+              <a href="tel:+919202900988" class="flex-1 text-center bg-white border border-slate-200 px-4 py-2 rounded-lg font-semibold">Call</a>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-soft overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1562163375-98ad5a46f9b3?q=80&w=1600&auto=format&fit=crop" alt="Tempo Traveller 17 Seater" class="h-40 w-full object-cover"/>
+          <div class="p-5">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-bold">Tempo Traveller 17 Seater</h3>
+              <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full">Mini Bus</span>
+            </div>
+            <ul class="mt-3 text-sm space-y-1 text-slate-600">
+              <li>Airport Transfer: ₹2,300</li>
+              <li>8 Hr / 80 KM: ₹4,500</li>
+              <li>Full Day / 120 KM: ₹5,500</li>
+              <li>Outstation: ₹22 / KM (Min 250 KM/Day)</li>
+            </ul>
+            <div class="mt-4 flex gap-2">
+              <a href="#contact" class="flex-1 text-center bg-slate-900 text-white px-4 py-2 rounded-lg font-semibold">Book</a>
+              <a href="tel:+919202900988" class="flex-1 text-center bg-white border border-slate-200 px-4 py-2 rounded-lg font-semibold">Call</a>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-soft overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1626337450150-2706291f2f77?q=80&w=1600&auto=format&fit=crop" alt="Safari / Scorpio" class="h-40 w-full object-cover"/>
+          <div class="p-5">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-bold">Safari / Scorpio</h3>
+              <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full">SUV</span>
+            </div>
+            <ul class="mt-3 text-sm space-y-1 text-slate-600">
+              <li>Airport Transfer: ₹1,200–1,600</li>
+              <li>8 Hr / 80 KM: ₹2,400–2,600</li>
+              <li>12 Hr / 120 KM: ₹2,600–3,200</li>
+              <li>Outstation: ₹14–17 / KM (Min 250 KM/Day)</li>
+            </ul>
+            <div class="mt-4 flex gap-2">
+              <a href="#contact" class="flex-1 text-center bg-slate-900 text-white px-4 py-2 rounded-lg font-semibold">Book</a>
+              <a href="tel:+919202900988" class="flex-1 text-center bg-white border border-slate-200 px-4 py-2 rounded-lg font-semibold">Call</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Airport CTA -->
+  <section id="airport" class="py-12 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-3xl font-extrabold">Airport Transfers</h2>
+        <p class="mt-3 text-slate-300">Fast, reliable pickup and drop to Rewa Airport & Prayagraj (Allahabad) Airport. Flat rates, zero surge.</p>
+        <ul class="mt-4 space-y-2 text-slate-200 text-sm">
+          <li>• Flight tracking & on-time pickups</li>
+          <li>• Meet & Greet on request</li>
+          <li>• GST invoice available</li>
+        </ul>
+      </div>
+      <div class="bg-white/10 rounded-2xl p-6">
+        <div class="grid sm:grid-cols-2 gap-4 text-sm">
+          <div class="bg-white/10 rounded-xl p-4">
+            <div class="font-semibold">Rewa ⇄ Airport</div>
+            <div class="text-slate-200">Sedan from ₹800</div>
+          </div>
+          <div class="bg-white/10 rounded-xl p-4">
+            <div class="font-semibold">Rewa ⇄ Prayagraj</div>
+            <div class="text-slate-200">Sedan from ₹2,499</div>
+          </div>
+        </div>
+        <a href="#contact" class="inline-block mt-5 bg-white text-slate-900 px-5 py-2.5 rounded-xl font-semibold">Book Airport Cab</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wedding Cars -->
+  <section id="wedding" class="py-14 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold mb-4">Wedding Car Services</h2>
+      <p class="text-slate-600 mb-6">Decorated luxury sedans & SUVs for Baraat, Bride/Groom entry, VIP transfers and guest logistics. Custom floral decor & ribbons available.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-soft">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop" class="h-40 w-full object-cover" alt="Wedding sedan"/>
+          <div class="p-5">
+            <h3 class="font-bold text-lg">Premium Sedan</h3>
+            <p class="text-sm text-slate-600">Honda City / Ciaz with classic floral decor.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-soft">
+          <img src="https://images.unsplash.com/photo-1496449903678-68ddcb189a24?q=80&w=1600&auto=format&fit=crop" class="h-40 w-full object-cover" alt="Wedding SUV"/>
+          <div class="p-5">
+            <h3 class="font-bold text-lg">Luxury SUV</h3>
+            <p class="text-sm text-slate-600">Fortuner / Endeavour style presence for grand entry.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-soft">
+          <img src="https://images.unsplash.com/photo-1529909746513-b5e729237de4?q=80&w=1600&auto=format&fit=crop" class="h-40 w-full object-cover" alt="Vintage theme"/>
+          <div class="p-5">
+            <h3 class="font-bold text-lg">Decor Packages</h3>
+            <p class="text-sm text-slate-600">Floral, ribbon, LED & theme-based customizations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking / Contact Form -->
+  <section id="contact" class="py-14 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-3xl font-extrabold">Quick Booking</h2>
+          <p class="mt-2 text-slate-600">Share your trip details and we’ll confirm on WhatsApp within minutes.</p>
+          <form id="bookingForm" class="mt-6 bg-white rounded-2xl p-6 border border-slate-200 shadow-soft">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="text-sm font-medium">Name</label>
+                <input required name="name" class="mt-1 w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"/>
+              </div>
+              <div>
+                <label class="text-sm font-medium">Phone (WhatsApp)</label>
+                <input required name="phone" type="tel" class="mt-1 w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"/>
+              </div>
+              <div>
+                <label class="text-sm font-medium">Pickup</label>
+                <input required name="pickup" class="mt-1 w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"/>
+              </div>
+              <div>
+                <label class="text-sm font-medium">Drop</label>
+                <input required name="drop" class="mt-1 w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"/>
+              </div>
+              <div>
+                <label class="text-sm font-medium">Date</label>
+                <input required name="date" type="date" class="mt-1 w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"/>
+              </div>
+              <div>
+                <label class="text-sm font-medium">Car Type</label>
+                <select name="car" class="mt-1 w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                  <option>Sedan</option>
+                  <option>SUV</option>
+                  <option>MUV</option>
+                  <option>Tempo Traveller</option>
+                </select>
+              </div>
+            </div>
+            <div class="mt-4">
+              <label class="text-sm font-medium">Notes</label>
+              <textarea name="notes" rows="3" class="mt-1 w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Flight no., luggage, hours, etc."></textarea>
+            </div>
+            <div class="mt-5 flex flex-wrap gap-3">
+              <button type="submit" class="px-5 py-2.5 rounded-xl bg-slate-900 text-white font-semibold">Send on WhatsApp</button>
+              <a href="#pay" class="px-5 py-2.5 rounded-xl bg-emerald-500 text-white font-semibold">Pay & Book</a>
+              <a href="tel:+919202900988" class="px-5 py-2.5 rounded-xl bg-white border border-slate-200 font-semibold">Call</a>
+            </div>
+          </form>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-soft">
+          <h3 class="text-xl font-bold">Contact</h3>
+          <p class="mt-2 text-slate-600">Shop No.1, Anand Bhawan, In front of BJP Office, Dhekaha, Rewa, MP 486001</p>
+          <div class="mt-3 space-y-2 text-slate-700">
+            <div>📞 <a href="tel:+919202900988" class="underline">+91 9202900988</a></div>
+            <div>📧 <a href="mailto:info@kamanatravels.com" class="underline">info@kamanatravels.com</a></div>
+            <div>🕒 Open 24×7</div>
+          </div>
+          <iframe class="mt-5 w-full h-64 rounded-xl border" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Anand%20Bhawan%20Dhekaha%20Rewa&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Payments -->
+  <section id="pay" class="py-14 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold">Online Payment</h2>
+      <p class="mt-2 text-slate-600">Pay a booking advance securely with Razorpay. (Test key placeholder – replace with your own.)</p>
+      <div class="mt-6 grid md:grid-cols-2 gap-8">
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+          <label class="text-sm font-medium">Amount (₹)</label>
+          <input id="amount" type="number" value="500" min="100" class="mt-1 w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"/>
+          <button id="rzpPay" class="mt-4 px-5 py-2.5 rounded-xl bg-emerald-500 text-white font-semibold">Pay Now</button>
+          <p class="mt-3 text-xs text-slate-500">You will receive payment confirmation on WhatsApp.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-soft">
+          <h3 class="font-bold">How it works</h3>
+          <ol class="mt-3 list-decimal list-inside text-sm text-slate-600 space-y-1">
+            <li>Enter amount and click Pay Now.</li>
+            <li>Complete UPI/Card/NetBanking payment in Razorpay.</li>
+            <li>Share screenshot or Order ID on WhatsApp.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-4 gap-8">
+      <div>
+        <div class="font-extrabold text-lg">Kamana Tours & Travel</div>
+        <p class="mt-2 text-sm text-slate-400">Faster, Safe, Reliable & Economical taxi service in Rewa. Local, outstation and airport rides. Wedding car services available.</p>
+        <div class="mt-4 flex items-center gap-3">
+          <a href="https://wa.me/919202900988" class="bg-emerald-500 text-white px-3 py-1.5 rounded-lg font-semibold">WhatsApp</a>
+          <a href="tel:+919202900988" class="bg-white text-slate-900 px-3 py-1.5 rounded-lg font-semibold">Call</a>
+        </div>
+      </div>
+      <div>
+        <div class="font-bold">Quick Links</div>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="#fleet" class="hover:underline">Taxi Rental</a></li>
+          <li><a href="#airport" class="hover:underline">Airport</a></li>
+          <li><a href="#wedding" class="hover:underline">Wedding Cars</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-bold">Timings</div>
+        <p class="mt-3 text-sm text-slate-400">Open 24×7, Mon–Sun</p>
+        <div class="mt-3 text-sm">GST Invoice • Corporate Billing • Emergency Support</div>
+      </div>
+      <div>
+        <div class="font-bold">Follow</div>
+        <div class="mt-3 flex gap-3 text-2xl">
+          <a href="#" aria-label="Facebook">👍</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="YouTube">▶️</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-slate-800 text-center text-xs py-4">© <span id="yr"></span> Kamana Tours & Travel. Design & Developed with ❤️.</div>
+  </footer>
+
+  <!-- Floating buttons -->
+  <a href="https://wa.me/919202900988" class="fixed bottom-5 right-5 flex items-center gap-2 bg-emerald-500 text-white px-4 py-3 rounded-full shadow-soft font-semibold">
+    <span>WhatsApp</span> <span aria-hidden>💬</span>
+  </a>
+  <a href="tel:+919202900988" class="fixed bottom-20 right-5 flex items-center gap-2 bg-white text-slate-900 border border-slate-200 px-4 py-3 rounded-full shadow-soft font-semibold">
+    <span>Call</span> <span aria-hidden>📞</span>
+  </a>
+
+  <!-- Scripts -->
+  <script>
+    // Year in footer
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // WhatsApp submit
+    const form = document.getElementById('bookingForm');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      const msg = `New Booking:%0AName: ${encodeURIComponent(data.name)}%0APhone: ${encodeURIComponent(data.phone)}%0APickup: ${encodeURIComponent(data.pickup)}%0ADrop: ${encodeURIComponent(data.drop)}%0ADate: ${encodeURIComponent(data.date)}%0ACar: ${encodeURIComponent(data.car)}%0ANotes: ${encodeURIComponent(data.notes||'')}%0A`;
+      window.open(`https://wa.me/919202900988?text=${msg}`, '_blank');
+    });
+
+    // Razorpay payment (replace KEY_ID with your own test/live key)
+    const payBtn = document.getElementById('rzpPay');
+    payBtn.addEventListener('click', function(){
+      const amt = Math.max(100, parseInt(document.getElementById('amount').value || '0', 10));
+      const options = {
+        key: 'rzp_test_XXXXXXXXXXXXXX', // TODO: replace with your Razorpay Key ID
+        amount: amt * 100,
+        currency: 'INR',
+        name: 'Kamana Tours & Travel',
+        description: 'Booking Advance',
+        image: 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f697.png',
+        handler: function (response) {
+          alert('Payment successful! Order ID: ' + response.razorpay_payment_id + '\nShare on WhatsApp for quick confirmation.');
+          const text = encodeURIComponent('Payment done. Razorpay ID: ' + response.razorpay_payment_id);
+          window.open('https://wa.me/919202900988?text=' + text, '_blank');
+        },
+        prefill: {},
+        theme: { color: '#10b981' }
+      };
+      const rzp = new Razorpay(options);
+      rzp.open();
+    });
+  </script>
+
+  <!-- LocalBusiness JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    "name": "Kamana Tours & Travel",
+    "image": "https://images.unsplash.com/photo-1549921296-3b4a6b7b4988?q=80&w=1600&auto=format&fit=crop",
+    "telephone": "+919202900988",
+    "areaServed": "Rewa, Madhya Pradesh, India",
+    "url": "https://kamanatravels.com/taxi",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Shop No.1, Anand Bhawan, In front of BJP Office, Dhekaha",
+      "addressLocality": "Rewa",
+      "addressRegion": "MP",
+      "postalCode": "486001",
+      "addressCountry": "IN"
+    },
+    "openingHours": "Mo-Su 00:00-23:59"
+  }
+  </script>
+</body>
+</html>
